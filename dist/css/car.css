@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+.header-top {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #dfdfdf;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #dfdfdf;
+  background: #fafafa;
+  height: 38px; }
+
+.head-top {
+  width: 1000px;
+  margin: 0 auto; }
+
+.head-top-left {
+  float: left;
+  position: relative; }
+  .head-top-left span, .head-top-left a {
+    font-size: 12px;
+    color: #8c8c8c;
+    line-height: 36px; }
+  .head-top-left a {
+    text-decoration: none; }
+  .head-top-left .login {
+    margin-left: 30px;
+    margin-right: 12px; }
+  .head-top-left .reg {
+    padding-left: 10px;
+    border-left: 1px solid #dfdfdf; }
+  .head-top-left #tip {
+    width: 214px;
+    height: 34px;
+    position: absolute;
+    top: 35px;
+    left: 173px;
+    z-index: 5;
+    font-size: 12px;
+    color: #fff;
+    background: url(../../src/images/add_r_tips.png) no-repeat 0 0; }
+    .head-top-left #tip p {
+      margin-top: 4px;
+      height: 30px;
+      line-height: 30px;
+      padding-left: 15px;
+      font-size: 12px; }
+    .head-top-left #tip #x {
+      cursor: pointer;
+      position: absolute;
+      top: 16px;
+      right: 5px;
+      z-index: 3;
+      width: 10px;
+      height: 15px;
+      background: url(../../src/images/add_r_tips.png) -201px -40px; }
+
+.head-top-right ul {
+  float: right; }
+
+.head-top-right li {
+  float: left; }
+
+.head-top-right i {
+  background: url(../../src/images/icon_list.png) no-repeat 0 -38px;
+  width: 14px;
+  height: 13px;
+  margin: 0 4px 0 10px;
+  vertical-align: middle;
+  display: inline-block; }
+
+.head-top-right a {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  color: #8c8c8c;
+  line-height: 36px;
+  border-left: 1px solid #dfdfdf; }
+
+.head-top-right b {
+  background: url(../../src/images/icon_list.png) no-repeat -157px -696px;
+  width: 10px;
+  height: 6px;
+  margin-left: 5px;
+  display: inline-block; }
+
+.head-top-right ul .one {
+  border: none; }
+
+.logo {
+  width: 1000px;
+  margin: 0 auto; }

@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+@mixin width{
+    width: 1000px;
+    margin: 0 auto;
+}
+.header{
+    @include width;
+    margin-top: 27px;
+    overflow: hidden;
+    img{
+        display: block;        
+    }
+    .logo{
+        display: block;
+        float: left;
+    }
+    .logo1{
+        float:right;
+        margin-top: 20px;
+    }
+}
+@mixin style{
+            height: 38px;
+            padding-left: 6px;
+            color:#c8c8c8 ;
+            font-size: 12px;
+            border: {
+                width: 1px;
+                style:solid;
+                color: #c8c8c8;
+            }
+}
+.content{
+    @include width;
+    margin-top: 45px;
+    overflow: hidden;
+     margin-bottom: 125px;
+    img{
+        float: left;
+        display: block;
+        margin: 20px 20px 0 36px;
+    }
+    form{
+        width: 330px;
+        float: right;        
+        margin-right: 25px;
+        padding: 0 10px;
+        .c{
+            width: 300px;
+            height: 30px;
+            margin-bottom: 30px;
+            line-height: 30px;
+            h2{
+            display: block;
+            float: left;
+            font-size: 22px;
+            color: #c41f3a;
+            }
+        span{
+            display: block;          
+            float: right;
+             font-size: 12px;
+            color: #8c8c8c;
+            a{
+            color: #c41f3a;               
+                }          
+            }
+        }
+        
+        #tel{
+            width: 294px;
+            @include style;
+        }
+        #pwd{
+            @extend #tel;
+        }
+        #ipwd{
+            @extend #tel;
+        }
+        #ptel,#pmes,#ppwd,#pPwd,#py{
+            width: 330px;
+            padding-top: 5px;
+            height: 25px;
+            font-size: 12px;
+          color: #c8c8c8;
+       }
+       #box {
+            font-family: Arial;
+            font-style: italic;
+            font-weight: bold;
+            border: 0;
+            letter-spacing: 2px;           
+            width: 70px;
+            height: 40px;
+            font-size: 22px;
+            color: mediumseagreen;
+            line-height: 36px;
+            text-align: center;
+            float: left;
+            margin-left: 20px;
+            border-radius: 5px;
+            background: #c8c8c8;
+            
+        }
+        .yz{
+            width: 300px;
+            #message{                                                             
+            width:168px ;
+            height: 38px;
+            @include style;
+            float: left;
+            }
+            .btn{
+            float: right;
+            width:116px ;
+            height: 38px;
+            margin-bottom: 30px;
+            line-height: 38px;
+            text-align: center;
+            font-size: 12px;
+            color: #000000;
+            border: {
+                width: 1px;
+                style:solid;
+                color: #c8c8c8;
+                }
+            }
+        }
+        #yzm{
+            width: 162px;
+            @include style;
+            float: left;
+        }
+      
+        #py{
+            float: left;
+        }
+        #aa{
+            height: 36px;
+            line-height: 36px;
+            font-size: 12px;
+            color: red;
+            float: left;
+            display: inline-block;            
+            margin-left: 8px;
+        }
+        #regist{
+            width: 302px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #94193f;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .tk{
+            margin-top: 10px;
+            font-size: 12px;
+            input{
+                float: left;
+                margin-right: 10px;
+            }            
+            .tk-t{  
+                float: left;              
+                color: #767676;
+               a{                                color:#c41f3a ;
+            } 
+            }
+            
+        }
+    }
+}
+
+.bottom{  
+    @include width;
+    overflow: hidden;
+    margin-bottom: 50px;
+    p{
+        font-size: 12px;
+        color: #7e7e7e;
+        line-height: 30px;
+        text-align: center;
+    }
+    .b-l{
+        text-align: center;
+        margin-top: 35px;
+    }
+}

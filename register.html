@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="dist/css/register.css" />
+		<script type="text/javascript" src="src/js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="src/js/checkcode.js"></script>
+		<script type="text/javascript" src="src/js/cookie1.js" ></script>
+		<script type="text/javascript" src="src/js/register.js" ></script>
+		
+	</head>
+
+	<body>
+		<div class="header">
+			<a href="index.html"><img src="src/images/logo.jpg" class="logo"></a>
+			<img src="src/images/top_center.jpg" class="logo1" />
+		</div>
+		<div class="content">
+			<img src="src/images/05657833660318005.jpg" />
+			<form>
+				<div class="c">
+					<h2>用户注册</h2><span>已有账号<a href="login.html" target="_blank">在此登录</a></span></div>
+
+				<input type="text" id="tel" value="" name="tel" placeholder="请输入手机号码" />
+				<p id="ptel"></p>
+				<!--<div class="yz">
+					<input type="text" id="message" value="" placeholder="验证码"/>
+					<input type="button" class="btn" value="获取短信验证码"><p id="pmes"></p>
+				</div>-->
+				<input type="text" id="pwd" value="" name="pwd" placeholder="请输入密码" />
+				<p id="ppwd"></p>
+				<input type="text" id="ipwd" value="" name="ipwd" placeholder="请再次输入密码" />
+				<p id="pPwd"></p>
+				<div id="yy">
+					<input type="text" value="" id="yzm" name="yzm" placeholder="验证码" />
+					<input type="button" id="box" ></input>
+					<a href="javascript:;" id="aa" onclick="createCode()">换一张</a>
+					<p id="py"></p>
+				</div>
+
+				<input type="button" value="立即注册" id="regist" />
+
+				<div class="tk"><input type="checkbox" checked="checked" />
+					<p class="tk-t">注册表示同意快乐购
+						<a href="http://www.happigo.com/news-7.html" target="_blank">《用户服务协议》</a>条款</p>
+				</div>
+			</form>
+		</div>
+
+		<script>
+			tel.onclick = function() {
+				ptel.innerHTML = "请输入手机号码";
+			}
+			tel.onblur = function() {
+				ptel.innerHTML = "";
+			}
+			//message.onclick=function(){
+			//		pmes.innerHTML="请输入发送到您手机上的验证码";			
+			//}
+			//message.onblur=function(){
+			//		pmes.innerHTML="";			
+			//}
+			pwd.onclick = function() {
+				ppwd.innerHTML = "请输入您的验证码，您的密码可能为数字、字母或符号组合";
+			}
+			pwd.onblur = function() {
+				ppwd.innerHTML = "";
+			}
+			ipwd.onclick = function() {
+				pPwd.innerHTML = "请输入六位数密码，您的密码可能为数字、字母或符号组合";
+			}
+			ipwd.onblur = function() {
+				pPwd.innerHTML = "";
+			}
+			yzm.onclick = function() {
+				py.innerHTML = "请输入右侧验证码";
+			}
+			yzm.onblur = function() {
+				py.innerHTML = "";
+			}
+			regist.onclick = function() {
+				if(/^1[3-9]\d{9}$/.test(tel.value)) {
+					ptel.innerHTML = "请稍后尝试";
+				} else {
+					ptel.innerHTML = "您输入手机号码有误";
+					ptel.style.color = "red";
+					tel.style.border = "1px solid red";
+				}
+				var pass = pwd.value;
+				var len = pass.length;
+				if(len == 6) {
+					ppwd.innerHTML = "密码合法";
+				} else {
+					ppwd.innerHTML = "密码不合法";
+					ppwd.style.color = "red";
+					pwd.style.border = "1px solid red";
+				}
+				var ipass = ipwd.value;
+				if(ipass == pass) {
+					pPwd.innerHTML = "密码一致";
+
+				} else {
+					pPwd.innerHTML = "密码不一致";
+					pPwd.style.color = "red";
+					ipwd.style.border = "1px solid red";
+				}
+			}
+		</script>
+		<!--<script>
+        $('#regist').click(function(){           
+            var data= $("form").serializeArray();
+             $.post("regist.php", data, function(obj){                            
+             if( obj.status=="success" ){
+                  location.href = "login.html";
+
+              }else{
+                  location.href = "register.html";
+                  alert(obj.msg);
+              }
+            }, "JSON")
+         });
+    </script>-->
+
+		<div class="bottom">
+			<p>Copyright&copy; 2006-2018 happigo .All Right Reserved 免费服务热线：400-705-1111 | 固话也可拨打：400-705-8800 E-Mail:service@happigo.com</p>
+			<p>湘ICP备17009657号 "信息网络传播视听节目许可证号:1810530"<img src="src/images/jh.png"> 湘公网安备 43010502000556号</p>
+			<div class="b-l">
+				<a href="http://www.itrust.org.cn/home/index/itrust_certifi/wm/2782875193.html" target="_blank"><img src="src/images/foot_img3.png"></a>
+				<a href="https://search.szfw.org/cert/l/CX20150428007576007720" target="_blank"><img src="src/images/foot_img4.png"></a>
+			</div>
+
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="dist/css/login2.css" />
+		<script src="dist/js/ajax1.js"></script>
+		<script src="src/js/checkcode.js"></script>
+		<script type="text/javascript" src="src/js/jquery-1.11.3.js" ></script>
+		<script type="text/javascript" src="src/js/login.js" ></script>
+		<script type="text/javascript" src="src/js/cookie1.js" ></script>
+
+	</head>
+
+	<body>
+
+		<form>
+
+			<input type="text" id="tel" value="" name="tel" placeholder="已验证手机号码" onclick="ptel.innerHTML='请输入手机号码'" onblur="ptel.innerHTML=''"/>
+			<p id="ptel"></p>
+			<!--<div class="yz">
+					<input type="text" id="message" value="" placeholder="验证码"/>
+					<input type="button" class="btn" value="获取短信验证码"><p id="pmes"></p>
+				</div>-->
+			<input type="text" id="pwd" value="" name="pwd" placeholder="请输入密码" onclick="ppwd.innerHTML='请输入密码'" onblur="ppwd.innerHTML=''"/>
+			<p id="ppwd"></p>
+			<div id="yy">
+				<input type="text" value="" id="yzm" placeholder="验证码" onclick="py.innerHTML='请输入验证码'" onblur="py.innerHTML=''"/>
+				<input type="button" id="box" value="8h0S"></input>
+				<a href="javascript:;" id="aa" onclick="createCode()">换一张</a>
+				<p id="py"></p>
+
+			</div>
+
+			<div>
+				<input type="checkbox" value="" name="" checked="checked" class="rem" /><span id="username">记住用户名</span>
+				<a href="javascript:;" class="forpwd">忘记密码？</a>
+			</div>
+
+			<input type="submit" value="立即登陆" id="login" />
+
+			<div class="log">
+				<p>您可以使用以下账号登录</p>
+				<ul>
+					<li>
+						<a class="hz_qq" href="http://www.happigo.com/shop/api.php?act=toqq" title="QQ"></a>
+					</li>
+					<li>
+						<a class="hz_xl" href="http://www.happigo.com/shop/api.php?act=tosina" title="新浪微博"></a>
+					</li>
+					<li>
+						<a class="hz_zfb" href="http://www.happigo.com/shop/api.php?act=zfb" title="支付宝"></a>
+					</li>
+				</ul>
+			</div>
+		</form>
+		
+		
+
+	</body>
+
+</html>

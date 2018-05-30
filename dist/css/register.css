@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.header {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 27px;
+  overflow: hidden; }
+  .header img {
+    display: block; }
+  .header .logo {
+    display: block;
+    float: left; }
+  .header .logo1 {
+    float: right;
+    margin-top: 20px; }
+
+.content {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 45px;
+  overflow: hidden;
+  margin-bottom: 125px; }
+  .content img {
+    float: left;
+    display: block;
+    margin: 20px 20px 0 36px; }
+  .content form {
+    width: 330px;
+    float: right;
+    margin-right: 25px;
+    padding: 0 10px; }
+    .content form .c {
+      width: 300px;
+      height: 30px;
+      margin-bottom: 30px;
+      line-height: 30px; }
+      .content form .c h2 {
+        display: block;
+        float: left;
+        font-size: 22px;
+        color: #c41f3a; }
+      .content form .c span {
+        display: block;
+        float: right;
+        font-size: 12px;
+        color: #8c8c8c; }
+        .content form .c span a {
+          color: #c41f3a; }
+    .content form #tel, .content form #pwd, .content form #ipwd {
+      width: 294px;
+      height: 38px;
+      padding-left: 6px;
+      color: #c8c8c8;
+      font-size: 12px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #c8c8c8; }
+    .content form #ptel, .content form #pmes, .content form #ppwd, .content form #pPwd, .content form #py {
+      width: 330px;
+      padding-top: 5px;
+      height: 25px;
+      font-size: 12px;
+      color: #c8c8c8; }
+    .content form #box {
+      font-family: Arial;
+      font-style: italic;
+      font-weight: bold;
+      border: 0;
+      letter-spacing: 2px;
+      width: 70px;
+      height: 40px;
+      font-size: 22px;
+      color: mediumseagreen;
+      line-height: 36px;
+      text-align: center;
+      float: left;
+      margin-left: 20px;
+      border-radius: 5px;
+      background: #c8c8c8; }
+    .content form .yz {
+      width: 300px; }
+      .content form .yz #message {
+        width: 168px;
+        height: 38px;
+        height: 38px;
+        padding-left: 6px;
+        color: #c8c8c8;
+        font-size: 12px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #c8c8c8;
+        float: left; }
+      .content form .yz .btn {
+        float: right;
+        width: 116px;
+        height: 38px;
+        margin-bottom: 30px;
+        line-height: 38px;
+        text-align: center;
+        font-size: 12px;
+        color: #000000;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #c8c8c8; }
+    .content form #yzm {
+      width: 162px;
+      height: 38px;
+      padding-left: 6px;
+      color: #c8c8c8;
+      font-size: 12px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #c8c8c8;
+      float: left; }
+    .content form #py {
+      float: left; }
+    .content form #aa {
+      height: 36px;
+      line-height: 36px;
+      font-size: 12px;
+      color: red;
+      float: left;
+      display: inline-block;
+      margin-left: 8px; }
+    .content form #regist {
+      width: 302px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background: #94193f;
+      border: none;
+      color: #fff;
+      cursor: pointer; }
+    .content form .tk {
+      margin-top: 10px;
+      font-size: 12px; }
+      .content form .tk input {
+        float: left;
+        margin-right: 10px; }
+      .content form .tk .tk-t {
+        float: left;
+        color: #767676; }
+        .content form .tk .tk-t a {
+          color: #c41f3a; }
+
+.bottom {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 50px; }
+  .bottom p {
+    font-size: 12px;
+    color: #7e7e7e;
+    line-height: 30px;
+    text-align: center; }
+  .bottom .b-l {
+    text-align: center;
+    margin-top: 35px; }

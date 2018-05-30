@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@mixin width {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header-top {
+    border-top: {
+        width: 1px;
+        style: solid;
+        color: #dfdfdf;
+    }
+    border-bottom: {
+        width: 1px;
+        style: solid;
+        color: #dfdfdf;
+    }
+    background:#fafafa;
+    height:38px;
+}
+
+.head-top {
+    @include width;
+}
+
+.head-top-left {
+    float: left;
+    position: relative;
+    span {
+        font-size: 12px;
+        color: #8c8c8c;
+        line-height: 36px;
+    }
+    a {
+        @extend span;
+        text-decoration: none;
+    }
+    .login {
+        margin-left: 30px;
+        margin-right: 12px;
+    }
+    .reg {
+        padding-left: 10px;
+        border-left: 1px solid #dfdfdf;
+    }
+    #tip {
+        width: 214px;
+        height: 34px;
+        position: absolute;
+        top: 35px;
+        left: 173px;
+        z-index: 5;
+        font-size: 12px;
+        color: #fff;
+        background: url(../../src/images/add_r_tips.png) no-repeat 0 0;
+        p {
+            margin-top: 4px;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 15px;
+            font-size: 12px;
+        }
+        #x {
+            cursor: pointer;
+            position: absolute;
+            top: 16px;
+            right: 5px;
+            z-index: 3;
+            width: 10px;
+            height: 15px;
+            background: url(../../src/images/add_r_tips.png) -201px -40px;
+        }
+    }
+}
+
+.head-top-right {
+    ul {
+        float: right;
+    }
+    li {
+        float: left;
+    }
+    i {
+        background: url(../../src/images/icon_list.png) no-repeat 0 -38px;
+        width: 14px;
+        height: 13px;
+        margin: 0 4px 0 10px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    a {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 12px;
+        color: #8c8c8c;
+        line-height: 36px;
+        border-left: 1px solid #dfdfdf;
+    }
+    b {
+        background: url(../../src/images/icon_list.png) no-repeat -157px -696px;
+        width: 10px;
+        height: 6px;
+        margin-left: 5px;
+        display: inline-block;
+        ;
+    }
+}
+
+.head-top-right {
+    ul {
+        .one {
+            border: none;
+        }
+    }
+}
+.logo{
+    @include width;
+}
