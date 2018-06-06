@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" href= "dist/css/car.css"/>
+		<title>快乐购商城</title>
+		<link rel="stylesheet" href="dist/css/car.min.css" />
+		<script type="text/javascript" src="dist/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="dist/js/jquery.cookie.min.js"></script>
 	</head>
-	<body>
-		<div class="header">
 
+	<body>
+
+		<div id="header">
 			<div class="header-top">
 				<div class="head-top">
 					<div class="head-top-left">
-						<span>欢迎来到快乐购！</span>
-						<a href="login.html" class="login" target="_blank">[登录]</a>
-						<a href="register.html" class="reg" target="_blank">[注册]</a>
-						<!--<div id="tip">
-							<p>注册即得新人专享288元购物红包</p>
-							<div id="x"></div>
-						</div>
-						<script>x.onclick = function() {
-	tip.style.display = "none";
-}</script>-->
+						<span>欢迎您登陆快乐购！</span>
+						<a href="index.html" class="reg" target="_blank">[退出]</a>
 
 					</div>
 					<div class="head-top-right">
@@ -39,19 +35,344 @@
 							</li>
 							<li>
 								<a href="">下载快乐购app</a>
+								<div class="download">
+									<img src="images/down_load_20160411.png"><span>快乐生活  快乐购</span>
+								</div>
 							</li>
 							<li>
 								<a href="">客服中心<b></b></a>
+								<div class="serve-center">
+									<a href="">客服中心<b></b></a>
+									<a href="">帮助中心</a>
+									<a href="">会员反馈</a>
+								</div>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<div class="logo">
-				<img src="src/images/logo.jpg" />
+			<div class="olo">
+				<div class="logo">
+					<a href="index1.html" target="_blank"><img src="images/logo.jpg" class="log1" /></a>
+					<img src="images/1.png" class="log2">
+				</div>
 			</div>
-			
-			
-			
+		</div>
+		<div class="Nav">
+			<div class="list">
+				<div class="list-nav">
+					<label>
+							<input type="checkbox" class="all" name="" checked="checked"/><span>全选</span>
+						</label>
+					<span class="shop">商品</span>
+					<ul>
+						<li>单价(元)</li>
+						<li>数量</li>
+						<li>小计(元)</li>
+						<li>操作</li>
+					</ul>
+				</div>
+				<div class="title">
+					<div class="title-a">
+						<input type="checkbox" class="che" name="" checked="checked"/>
+						<span>自营</span><b>快乐购商城</b>
+					</div>
+					<div class="title-b">
+						在线支付满129.00元包邮
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="shopcar">
+
+		</div>
+
+		<div class="total-price">
+			<input type="checkbox" value="" name="" id="all" class="all-3" checked="checked"/><span>全选</span>
+			<div class="tot-p">
+				<span>已选商品<i class="shop-num">1</i>件</span>
+				<span>商品总价(不含运费)</span><b id="Tot">￥0.00</b>
+				<a href="">去结算</a>
+			</div>
+		</div>
+		<div class="Like">
+			<span class="like">猜你喜欢</span>
+		</div>
+		<div class="intro">暂无商品向您推荐！</div>
+
+		<script type="text/javascript">
+			$(function() {
+				var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+				if(!cartStr) {
+					$(".shopcar").css({
+						display: "block"
+					});
+				} else {
+					var cartObj = convertCartStrToObj(cartStr);
+					for(var id in cartObj) {
+						var good = cartObj[id];
+						var str = '<ul class="goodInfo" data-good-id="' + id + '">' +
+							'<li> <input type="checkbox" value="" name="" class="check" checked="checked"/></li>' +
+							'<li><img src="' + good.src + '" /></li>' +
+							'<li>' + good.name + '</li>' +
+							'<li class="good-price">' + "￥" + good.price + '</li>' +
+							'<li class="num">' +
+							'<a href="javascript:;" class="minus">-</a>' +
+							' <input type="text" class="tet" value="' + good.num + '" />  ' +
+							'<a href="javascript:;" class="plus">+</a>' +
+							'</li>' +
+							'<li class="total">' + "￥" + good.num * good.price + '</li>' +
+							'<li><a href="javascript:;" class="del">删除</a></li>' +
+							'</ul>';
+
+						$(str).appendTo(".shopcar");
+					}
+
+					$('.goodInfo a.del').click(function() {
+						var id = $(this).parents('.goodInfo').remove().attr("data-good-id");
+						var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+						var cartObj = convertCartStrToObj(cartStr);
+						delete cartObj[id];
+						$.cookie('cart', convertObjToCartStr(cartObj), {
+							expires: 7,
+							path: "/"
+						});
+					})
+
+					$(".goodInfo a.plus").click(function() {
+						var id = $(this).parents('.goodInfo').attr("data-good-id");
+						var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+						var cartObj = convertCartStrToObj(cartStr);
+						cartObj[id].num += 1;
+						$(this).siblings("input").val("" + cartObj[id].num);
+						$(this).parent().siblings('.total').html(cartObj[id].num * cartObj[id].price + "");
+						$("#Tot").html(cartObj[id].num * cartObj[id].price + "");
+
+						$.cookie('cart', convertObjToCartStr(cartObj), {
+							expires: 7,
+							path: "/"
+						});
+					});
+
+					$(".goodInfo a.minus").click(function() {
+						var id = $(this).parents('.goodInfo').attr("data-good-id");
+						var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+						var cartObj = convertCartStrToObj(cartStr);
+						if(cartObj[id].num > 1) {
+							cartObj[id].num -= 1;
+
+							$(this).siblings("input").val("" + cartObj[id].num);
+
+							$(this).parent().siblings('.total').html(cartObj[id].num * cartObj[id].price + "");
+							$("#Tot").html(cartObj[id].num * cartObj[id].price + "");
+							$.cookie('cart', convertObjToCartStr(cartObj), {
+								expires: 7,
+								path: "/"
+							});
+						}
+
+					});
+
+					$(".goodInfo li.num input").blur(function() {
+						var id = $(this).parents('.goodInfo').attr("data-good-id");
+						var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+						var cartObj = convertCartStrToObj(cartStr);
+
+						var pattern = /^\d+$/;
+						if(!pattern.test($(this).val())) {
+							cartObj[id].num = 1;
+							$(this).val("1");
+						} else {
+
+							cartObj[id].num = parseInt($(this).val());
+						}
+
+						$(this).siblings("input").val("" + cartObj[id].num);
+
+						$(this).parent().siblings('.total').html(cartObj[id].num * cartObj[id].price + "");
+						$("#Tot").html(cartObj[id].num * cartObj[id].price + "");
+						$.cookie('cart', convertObjToCartStr(cartObj), {
+							expires: 7,
+							path: "/"
+						});
+					})
+
+				}
+
+			});
+
+			function convertCartStrToObj(cartStr) {
+				if(!cartStr) {
+					return {};
+				}
+				var goods = cartStr.split(":");
+				var obj = {};
+				for(var i = 0; i < goods.length; i++) {
+					var data = goods[i].split(",");
+					obj[data[0]] = {
+						name: data[1],
+						price: parseFloat(data[2]),
+						num: parseInt(data[3]),
+						src: data[4]
+					}
+				}
+				return obj;
+			}
+
+			function convertObjToCartStr(obj) {
+				var cartStr = "";
+				for(var id in obj) {
+					if(cartStr) {
+						cartStr += ":";
+					}
+					cartStr += id + "," + obj[id].name + "," + obj[id].price + "," + obj[id].num + "," + obj[id].src;
+				}
+				return cartStr;
+			}
+		</script>
+
+		<div class="footer">
+			<div class="foot">
+				<img src="images/foot_img1.jpg" />
+				<div class="list">
+					<div class="list-l">
+						<ol>
+							<li class="l-1">
+								<a href="">使用帮助</a>
+							</li>
+							<li class="l-2">
+								<a href="">税费收取规则</a>
+							</li>
+							<li class="l-2">
+								<a href="">新手指南</a>
+							</li>
+							<li class="l-2">
+								<a href="">常见问题</a>
+							</li>
+							<li class="l-2">
+								<a href="">用户协议</a>
+							</li>
+						</ol>
+						<ol>
+							<li class="l-1">
+								<a href="">会员服务</a>
+							</li>
+							<li class="l-2">
+								<a href="">积分政策</a>
+							</li>
+							<li class="l-2">
+								<a href="">会员权益</a>
+							</li>
+							<li class="l-2">
+								<a href="">会员等级</a>
+							</li>
+
+						</ol>
+						<ol>
+							<li class="l-1">
+								<a href="">使用帮助</a>
+							</li>
+							<li class="l-2">
+								<a href="">税费收取规则</a>
+							</li>
+							<li class="l-2">
+								<a href="">新手指南</a>
+							</li>
+							<li class="l-2">
+								<a href="">常见问题</a>
+							</li>
+							<li class="l-2">
+								<a href="">用户协议</a>
+							</li>
+						</ol>
+						<ol>
+							<li class="l-1">
+								<a href="">配送方式</a>
+							</li>
+							<li class="l-2">
+								<a href="">包邮政策</a>
+							</li>
+							<li class="l-2">
+								<a href="">费用说明</a>
+							</li>
+							<li class="l-2">
+								<a href="">配送说明</a>
+							</li>
+
+						</ol>
+						<ol>
+							<li class="l-1">
+								<a href="">售后服务</a>
+							</li>
+							<li class="l-2">
+								<a href="">电子发票</a>
+							</li>
+							<li class="l-2">
+								<a href="">售后咨询</a>
+							</li>
+							<li class="l-2">
+								<a href="">退货办理</a>
+							</li>
+							<li class="l-2">
+								<a href="">退货政策</a>
+							</li>
+						</ol>
+					</div>
+					<div class="list-r">
+						<div class="r-1">
+							<p>手机快乐购</p>
+							<img src="images/footer_ewm_01.png" />
+							<span>下载移动客户端</span>
+						</div>
+						<div class="r-1">
+							<p>手机快乐购</p>
+							<img src="images/footer_ewm_02.png" />
+							<span>快乐购官方网站</span>
+						</div>
+					</div>
+					<div class="list-b">
+						<ul>
+							<li>
+								<a href="">关于快乐购</a>
+							</li>
+							<li>
+								<a href="">投资者关系</a>
+							</li>
+							<li>
+								<a href="">平台招商</a>
+							</li>
+							<li>
+								<a href="">自营品牌招商</a>
+							</li>
+							<li>
+								<a href="">联系我们</a>
+							</li>
+							<li class="l-b-b">
+								<a href="">营业执照</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="bottom-bg">
+			<div class="bottom">
+				<p>Copyright&copy; 2006-2018 happigo .All Right Reserved 免费服务热线：400-705-1111 | 固话也可拨打：400-705-8800 E-Mail:service@happigo.com</p>
+				<p>湘ICP备17009657号 "信息网络传播视听节目许可证号:1810530"<img src="images/jh.png"> 湘公网安备 43010502000556号</p>
+
+				<p>
+					<a href="https://v.pinpaibao.com.cn/cert/site/?site=www.happigo.com&at=business" target="_blank"><img src="images/hy_124x47.png"></a>
+					<a href="http://si.trustutn.org/info?sn=274180122031647490426&certType=1" target="_blank"><img src="images/brand_bottom_small.jpg"></a>
+					<a href="http://shuidi.cn/company_extreme_18830624680420226817875805655177.html" target="_blank"><img src="images/footer_shuidi.png"></a>
+					<a href="https://search.szfw.org/cert/l/CX20150428007576007720" target="_blank"><img src="images/footer_img4.png"></a>
+				</p>
+
+			</div>
+
+			<div class="bg"></div>
+
 	</body>
+
 </html>

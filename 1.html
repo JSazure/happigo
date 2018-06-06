@@ -1,43 +1,322 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" href="dist/css/login1.css" />
-		<script src="dist/js/ajax1.js"></script>
-		<script type="text/javascript" src="src/js/checkcode.js" ></script>
-		
-		
+		<link rel="stylesheet" href="dist/css/lists.min.css" />
 	</head>
-
 	<body>
-		<form>
-			<input type="text" id="tel" value="" name="tel" placeholder="请输入手机号码" onclick="ptel.innerHTML='请输入手机号码'" onblur="ptel.innerHTML=''"/>
-			<p id="ptel"></p>
-			<div id="yy">
-				<input type="text" value="" id="yzm" placeholder="验证码" onclick="py.innerHTML='请输入验证码'" onblur="py.innerHTML=''"/>
-				<input type="button" id="box"   value="4NhU">
-				<a href="javascript:;" id="aa" onclick="createCode()">换一张</a>
-				<p id="py"></p>
+		<div class="goods">
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_240313_360.jpg"></dt>
+						<dd class="t-a">
+					小心眼  植物精粹眼膏10g*1支
+						</dd>
+						<dd class="m">￥88.00</dd>
+						<dd class="m1">快乐价<b>￥68.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_240314_360.jpg"></dt>
+						<dd class="t-a">
+					小心眼  植物精粹眼贴10片*1盒
+						</dd>
+						<dd class="m">￥69.00</dd>
+						<dd class="m1">快乐价<b>￥58.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_240315_360.jpg"></dt>
+						<dd class="t-a">
+					小心眼  雾化洗眼液90ml
+						</dd>
+						<dd class="m">￥119.00</dd>
+						<dd class="m1">快乐价<b>￥99.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_240370_360.jpg"></dt>
+						<dd class="t-a">
+					小心眼  眼部护理套组(眼贴套组/眼罩套组)
+						</dd>
+						<dd class="m">￥199.00</dd>
+						<dd class="m1">快乐价<b>￥199.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_240159_360.jpg"></dt>
+						<dd class="t-a">
+					bourjois/妙巴黎   保湿调色隔离霜30ml SPF15
+						</dd>
+						<dd class="m">￥199.00</dd>
+						<dd class="m1">快乐价<b>￥179.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_201278b_360.jpg"></dt>
+						<dd class="t-a">
+					御泥坊黑玫瑰奢华升级面膜升级组*42片
+						</dd>
+						<dd class="m">￥893.00</dd>
+						<dd class="m1">快乐价<b>￥159.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_185186c_360.jpg"></dt>
+						<dd class="t-a">
+					御泥坊黑玫瑰奢华升级面膜升级金装版*50片
+						</dd>
+						<dd class="m">￥369.00</dd>
+						<dd class="m1">快乐价<b>￥299.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_QQ图片20180314164914_360.jpg"></dt>
+						<dd class="t-a">
+					御泥坊晶亮红石榴面膜*42片(25ml*7片*6盒)
+						</dd>
+						<dd class="m">￥359.00</dd>
+						<dd class="m1">快乐价<b>￥199.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_230357b_360.jpg"></dt>
+						<dd class="t-a">
+					CAL-LOU卡露泉 植物纤维面膜28ml*5片*4盒
+						</dd>
+						<dd class="m">￥552.00</dd>
+						<dd class="m1">快乐价<b>￥99.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_236728_360.jpg"></dt>
+						<dd class="t-a">
+					tt蜂王浆双耳提拉面膜组(30ml/片*5片/盒*8盒)
+						</dd>
+						<dd class="m">￥398.00</dd>
+						<dd class="m1">快乐价<b>￥238.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_232228b_360.jpg"></dt>
+						<dd class="t-a">
+					兰芝  雪纱丝柔修颜隔离霜30ml
+						</dd>
+						<dd class="m">￥265.00</dd>
+						<dd class="m1">快乐价<b>￥219.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_236102z_360.jpg"></dt>
+						<dd class="t-a">
+					ANESSA /安耐晒  资生堂防晒露防晒霜防汗防水金瓶60ml
+						</dd>
+						<dd class="m">￥298.00</dd>
+						<dd class="m1">快乐价<b>￥258.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_233064_360.jpg"></dt>
+						<dd class="t-a">
+					维多利亚 瑞典 蛋清毛孔护理保湿洁面皂1+1超值组
+						</dd>
+						<dd class="m">￥299.00</dd>
+						<dd class="m1">快乐价<b>￥249.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_233065_360.jpg"></dt>
+						<dd class="t-a">
+					艾叶生姜精油按摩仪特惠组(艾叶精油150ml*2+舒缓精油100ml*2)
+						</dd>
+						<dd class="m">￥498.00</dd>
+						<dd class="m1">快乐价<b>￥289.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_236861_360.jpg"></dt>
+						<dd class="t-a">
+					MYTHIC  FLORA天紫金兰逆龄凝时精华组
+						</dd>
+						<dd class="m">￥598.00</dd>
+						<dd class="m1">快乐价<b>￥389.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_236113_360.jpg"></dt>
+						<dd class="t-a">
+					JAYJUN  密集焕亮面膜  樱花水光三部曲10片
+						</dd>
+						<dd class="m">￥168.00</dd>
+						<dd class="m1">快乐价<b>￥129.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_236112_360.jpg"></dt>
+						<dd class="t-a">
+					JAYJUN水光玫瑰面膜10片补水保湿蚕丝
+						</dd>
+						<dd class="m">￥155.00</dd>
+						<dd class="m1">快乐价<b>￥119.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_236850_360.jpg"></dt>
+						<dd class="t-a">
+					CAL-LOU  卡露泉 七天焕颜面膜30ml*7片*3盒<br />
+						</dd>
+						<dd class="m">￥636.00</dd>
+						<dd class="m1">快乐价<b>￥189.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_236317_360.jpg"></dt>
+						<dd class="t-a">
+					ALBION/奥比虹 奥尔滨清透好感身体防晒乳SPA30PA++120g
+						</dd>
+						<dd class="m">￥310.00</dd>
+						<dd class="m1">快乐价<b>￥289.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_238729_360.jpg"></dt>
+						<dd class="t-a">
+					LaEsTephe瑞思美  骨胶原面膜6片
+						</dd>
+						<dd class="m">￥236.00</dd>
+						<dd class="m1">快乐价<b>￥169.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_238728_360.jpg"></dt>
+						<dd class="t-a">
+					LaEsTephe瑞思美  鱼子精粹面膜6片
+						</dd>
+						<dd class="m">￥156.00</dd>
+						<dd class="m1">快乐价<b>￥96.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_239629_360.jpg"></dt>
+						<dd class="t-a">
+					爱思昂 水解胶原蛋白粉(2罐)原装进口
+						</dd>
+						<dd class="m">￥698.00</dd>
+						<dd class="m1">快乐价<b>￥428.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_232898aa_360.jpg"></dt>
+						<dd class="t-a">
+					倍轻松isee E眼周护理套组(眼部按摩仪+按摩器)
+						</dd>
+						<dd class="m">￥998.00</dd>
+						<dd class="m1">快乐价<b>￥689.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_233076a_360.jpg"></dt>
+						<dd class="t-a">
+					欧丽寇 线雕7天换肤紧致套组  夏季轻薄款(原装进口)
+						</dd>
+						<dd class="m">￥1458.00</dd>
+						<dd class="m1">快乐价<b>￥1,280</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_210440a_360.jpg"></dt>
+						<dd class="t-a">
+					土耳其Rose Water洛神诗玫瑰精露200ml+100ml
+						</dd>
+						<dd class="m">￥208.00</dd>
+						<dd class="m1">快乐价<b>￥312.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_218236_360.jpg"></dt>
+						<dd class="t-a">
+					御泥坊氨基酸温和净透洁面乳100ml
+						</dd>
+						<dd class="m">￥69.00</dd>
+						<dd class="m1">快乐价<b>￥90.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_219876b_360.jpg"></dt>
+						<dd class="t-a">
+					韩束咕噜精华液超值组
+						</dd>
+						<dd class="m">￥358.00</dd>
+						<dd class="m1">快乐价<b>￥498.00</b></dd>
+					
+					</dl>
+				</a>
+				<a href="">
+					<dl>
+						<dt><img src="images/1_main_222511c_360.jpg"></dt>
+						<dd class="t-a">
+					SKINN诗蔻茵  尖叫换肤精华定制组(原装进口)
+						</dd>
+						<dd class="m">￥1680.00</dd>
+						<dd class="m1">快乐价<b>￥3120.00</b></dd>
+					
+					</dl>
+				</a>
 			</div>
-			<input type="button" value="立即登录" id="login" />
-			<div class="log">
-				<p>您可以使用以下账号登录</p>
-				<ul>
-					<li>
-						<a class="hz_qq" href="http://www.happigo.com/shop/api.php?act=toqq" title="QQ"></a>
-					</li>
-					<li>
-						<a class="hz_xl" href="http://www.happigo.com/shop/api.php?act=tosina" title="新浪微博"></a>
-					</li>
-					<li>
-						<a class="hz_zfb" href="http://www.happigo.com/shop/api.php?act=zfb" title="支付宝"></a>
-					</li>
-				</ul>
-			</div>
-		</from>
+		
 		
 	</body>
-
 </html>

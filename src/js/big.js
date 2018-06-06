@@ -2,20 +2,18 @@
 small.onmousemove = e => {
 				var [x, y] = [e.clientX - box.offsetLeft, e.clientY - box.offsetTop];
 				x -= glass.offsetWidth / 2;
-				y -= glass.offsetHeight / 2;
+				y = (y-glass.offsetHeight / 2)+200;
 				console.log(x, y);
 				if(x < 0) x = 0;
 				if(y < 0) y = 0;
-				var maxX = small.offsetWidth - glass.offsetWidth - 2;
+				var maxX = small.offsetWidth - glass.offsetWidth ;
 				if(x > maxX) x = maxX;
-				var maxY = small.offsetHeight - glass.offsetHeight - 2;
+				var maxY = small.offsetHeight - glass.offsetHeight;
 				if(y > maxY) y = maxY;
 				[glass.style.left, glass.style.top] = [x + "px", y + "px"];
-				imgbig.style.left = -4 * x + "px";
-				imgbig.style.top = -4 * y + "px";
+				imgbig.style.left = -3 * x + "px";
+				imgbig.style.top = -3 * y + "px";
 
-				imgsmall2.style.left = -1 * x + "px";
-				imgsmall2.style.top = -1 * y + "px";
 
 			}
 			small.onmouseover = () => {

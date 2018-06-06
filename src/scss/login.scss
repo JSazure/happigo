@@ -36,9 +36,8 @@ a {
 @mixin style {
     height: 40px;
     padding-left: 6px;
-    color: #c8c8c8;
+    color: #444851;
     font-size: 12px;
-    //          margin-bottom: 33px;
     border: {
         width: 1px;
         style: solid;
@@ -49,8 +48,8 @@ a {
 .content {
     @include width;
     margin-top: 45px;
-    overflow: hidden;
-    margin-bottom: 200px;
+    
+    margin-bottom: 600px;
     img {
         float: left;
         display: block;
@@ -61,10 +60,27 @@ a {
         float: right;
         margin-right: 25px;
         padding: 0 10px;
+        color: #444851;
         .c {
             width: 300px;
             height: 30px;
             line-height: 30px;
+        }
+        ul{
+            width: 330px;
+            position: relative;
+            
+            .checked{
+                display: block;
+            }
+            li{
+                width: 330px;
+                list-style: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+            }
         }
         h2 {
             display: block;
@@ -94,58 +110,50 @@ a {
                 margin-left: 80px;
             }
         }
-        #tel {
+        #tel1,#tel2 {
             width: 294px;
             @include style;
         }
-        #ptel {
+        #ptel1,#ptel2,,#ppwd {
             width: 330px;
             padding-top: 5px;
             height: 25px;
             font-size: 12px;
             color: #c8c8c8;
         }
-        #py{
-            @extend #ptel;
+        #pwd{
+            @extend #tel1;           
+        }
+        #py1,#py2{
+            @extend #ptel1;
             float: left;            
         }
-        #pmes {
-            @extend #ptel;
-        }
-        .yz {
-            width: 300px;
-            #message {
-                width: 300px;
-                height: 38px;
-                @include style;
-                float: left;
-                margin-bottom: 30px;
-            }
-        }
-        #yzm {
+        #yzm1,#yzm2{
             width: 162px;
             @include style;
             float: left;
         }
-        #box {
+
+        #box1,#box2 {
             font-family: Arial;
             font-style: italic;
             font-weight: bold;
             border: 0;
             letter-spacing: 2px;           
-            width: 70px;
-            height: 40px;
+            width: 74px;
+            height: 42px;
             font-size: 22px;
             color: mediumseagreen;
-            line-height: 36px;
+            line-height:42px;
             text-align: center;
             float: left;
-            margin-left: 20px;
+            margin-left: 16px;
             border-radius: 5px;
-            background: #C8C8C8;
-            
+            background: #C8C8C8;          
         }
-        #aa {
+       
+        #aa1,#aa2 {
+            display: block;
             height: 36px;
             line-height: 36px;
             font-size: 12px;
@@ -154,7 +162,25 @@ a {
             display: inline-block;
             margin-left: 8px;
         }
-        #login {
+       
+        .rem{
+        float: left;
+    }
+    #username{
+        display: block;
+        font-size: 12px;
+        color: #000000;
+        float: left;
+        margin-left: 5px;
+    }
+    .forpwd{
+        display: block;
+        font-size: 12px;
+        color: #C8C8C8;
+        float: right;
+        margin-right:50px;
+    }
+        #login1,#login2 {
             width: 302px;
             height: 40px;
             line-height: 40px;
@@ -167,28 +193,28 @@ a {
         }
         .log {
             padding-top: 15px;
+            height: 100px;
+            
             p {
                 font-size: 12px;
                 color: #000000;
             }
-            ul {
+            div{
                 width: 300px;
                 margin-top: 15px;
-                li {
-                    margin-right: 8px;
-                    display: inline-block;
-                }
                 a {
                     display: block;
+                    float: left;
                     width: 50px;
                     height: 50px;
-                    background: url(../../src/images/login_icon_list_1.png) no-repeat;
+                    margin-right: 8px;
+                    background: url(../../images/login_icon_list_1.png) no-repeat;
                 }
                 .hz_qq {
-                    background-position: -74px -32px;
+                    background-position: 0 -32px;
                 }
                 .hz_xl {
-                    background-position: 0 -32px;
+                    background-position:-74px -32px;
                 }
                 .hz_zfb {
                     background-position: -143px -32px;

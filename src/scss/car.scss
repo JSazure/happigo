@@ -1,131 +1,324 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-@mixin width {
-    width: 1000px;
-    margin: 0 auto;
-}
-
-.header-top {
-    border-top: {
-        width: 1px;
-        style: solid;
-        color: #dfdfdf;
-    }
+@import "public";
+.olo {
     border-bottom: {
+        width: 2px;
+        style: solid;
+        color: #e6e6e5;
+    }
+    overflow:hidden;
+}
+
+.logo {
+    @include width2;
+    img {
+        display: block;
+    }
+    .log1 {
+        float: left;
+        margin-top: 28px;
+        margin-bottom: 48px;
+    }
+    .log2 {
+        float: right;
+        margin-top: 80px;
+    }
+}
+
+.Nav {
+    overflow: hidden;
+    .list {
+        @include width2;
+    }
+}
+
+@mixin nav {
+    float: left;
+    line-height: 35px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.list-nav {
+    @include width2;
+    height: 35px;
+    line-height: 35px;
+    background: #efefef;
+    font-size: 12px;
+    border: {
         width: 1px;
         style: solid;
-        color: #dfdfdf;
+        color: #dadada;
     }
-    background:#fafafa;
-    height:38px;
-}
-
-.head-top {
-    @include width;
-}
-
-.head-top-left {
-    float: left;
-    position: relative;
-    span {
-        font-size: 12px;
-        color: #8c8c8c;
-        line-height: 36px;
-    }
-    a {
-        @extend span;
-        text-decoration: none;
-    }
-    .login {
-        margin-left: 30px;
-        margin-right: 12px;
-    }
-    .reg {
-        padding-left: 10px;
-        border-left: 1px solid #dfdfdf;
-    }
-    #tip {
-        width: 214px;
-        height: 34px;
-        position: absolute;
-        top: 35px;
-        left: 173px;
-        z-index: 5;
-        font-size: 12px;
-        color: #fff;
-        background: url(../../src/images/add_r_tips.png) no-repeat 0 0;
-        p {
-            margin-top: 4px;
-            height: 30px;
-            line-height: 30px;
-            padding-left: 15px;
-            font-size: 12px;
+    ;
+    margin-top:40px;
+    margin-bottom:19px;
+    label {
+        float: left;
+        .all {
+            width: 13px;
+            height: 13px;
+            line-height: 13px;
+            margin-right: 7px;
+            margin-left: 12px;
+            margin-top: 14px;
         }
-        #x {
-            cursor: pointer;
-            position: absolute;
-            top: 16px;
-            right: 5px;
-            z-index: 3;
-            width: 10px;
-            height: 15px;
-            background: url(../../src/images/add_r_tips.png) -201px -40px;
+        span {
+            display: inline-block;
+            line-height: 35px;
         }
     }
-}
-
-.head-top-right {
+    .shop {
+        margin-left: 103px;
+        line-height: 35px;
+        float: left;
+        display: block;
+    }
     ul {
         float: right;
-    }
-    li {
-        float: left;
-    }
-    i {
-        background: url(../../src/images/icon_list.png) no-repeat 0 -38px;
-        width: 14px;
-        height: 13px;
-        margin: 0 4px 0 10px;
-        vertical-align: middle;
-        display: inline-block;
-    }
-    a {
-        padding-left: 10px;
-        padding-right: 10px;
-        font-size: 12px;
-        color: #8c8c8c;
-        line-height: 36px;
-        border-left: 1px solid #dfdfdf;
-    }
-    b {
-        background: url(../../src/images/icon_list.png) no-repeat -157px -696px;
-        width: 10px;
-        height: 6px;
-        margin-left: 5px;
-        display: inline-block;
-        ;
-    }
-}
-
-.head-top-right {
-    ul {
-        .one {
-            border: none;
+        li {
+            float: left;
+        }
+        li:nth-of-type(1) {
+            @include nav;
+            margin-left: 438px;
+            margin-right: 155px;
+        }
+        li:nth-of-type(2) {
+            @include nav;
+            margin-right: 145px;
+        }
+        li:nth-of-type(3) {
+            @include nav;
+            margin-right: 85px;
+        }
+        li:nth-of-type(4) {
+            @include nav;
+            margin-right: 45px;
         }
     }
 }
-.logo{
-    @include width;
+
+.title {
+    @include width2;
+    overflow: hidden;
+    border-bottom: {
+        width: 2px;
+        style: solid;
+        color: #b2b2b2;
+    }
+}
+
+.title-a {
+    line-height: 16px;
+    float: left;
+    margin-bottom: 10px;
+    .che {
+        width: 12px;
+        height: 12px;
+        float: left;
+        margin-left: 18px;
+    }
+    span {
+        width: 30px;
+        height: 16px;
+        border-radius: 5px;
+        display: block;
+        color: #fff;
+        line-height: 16px;
+        text-align: center;
+        background: #e60012;
+        font-size: 12px;
+        float: left;
+        margin-left: 10px;
+    }
+    b {
+        font-size: 12px;
+        margin-left: 4px;
+    }
+}
+
+.title-b {
+    font-size: 12px;
+    color: #333333;
+    float: right;
+    margin-bottom: 7px;
+    margin-right: 20px;
+}
+
+.shopcar {
+    //  display: none;
+    @include width2;
+    height: 130px;
+    line-height: 130px;
+    text-align: center;
+    font-size: 13px;
+    color: #7E7E7E;
+    border: {
+        width: 1px;
+        style: solid;
+        left: {
+            color: #fdf4f7;
+        }
+        right: {
+            color: #fdf4f7;
+        }
+        bottom: {
+            color: #E5E5E5;
+        }
+    }
+    border-top:none;
+    ul {              
+        li {
+            float: left;
+        }
+    }
+    .check{
+        margin-left: 18px;
+        margin-right: 20px;
+    }
+    img {
+        width: 80px;
+        height: 80px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    .num{
+      
+        height: 25px;
+        margin-left: 130px;
+        margin-top: 50px;
+        border: {
+                width: 1px;
+                style: solid;
+                color: #c8c8c8;
+            }
+            
+        .minus{
+         display: block;
+        cursor: pointer;
+        width: 20px;
+        height: 23px;
+        line-height: 23px;
+        text-align: center;
+        color: #666666;
+        float: left;
+
+    }
+    .plus{
+        @extend .minus;
+    }
+    .tet {
+        width: 50px;
+        height: 22px;
+        float: left;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    }
+    .del{
+        margin-left:90px;
+        color: #666666;
+    }
+    .del:hover{
+        color: red;
+    }
+    .good-price{
+        margin-left: 300px;
+    }
+    .total{
+        margin-left: 100px;
+    }
+}
+
+
+.total-price {
+    @include width2;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666560;
+    border: {
+        width: 1px;
+        style: solid;
+        color: #E5E5E5;
+    }
+    
+    ;
+    .all-3 {
+        margin-left: 14px;
+    }
+    
+    span {
+        margin-left: 4px;
+    }
+    
+    .tot-p {
+        float: right;
+        i {
+            font-size: 13px;
+            margin: 0 5px;
+            font-style: normal;
+            color: #a5043a;
+        }
+        b {
+            font-size: 14px;
+            color: #a5043a;
+            margin-right: 33px;
+        }
+        span {
+            margin-right: 14px;
+        }
+        a {
+            display: block;
+            background: #de082e;
+            width: 108px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            color: #ffffff;
+            float: right;
+            font-size: 19px;
+        }
+    }
+}
+.Like {
+    @include width2;
+    height: 26px;
+    margin-top: 38px;
+    .like {
+        display: block;
+        width: 120px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        font-size: 12px;
+        color: #a40339;
+        border-bottom: {
+            width: 2px;
+            style: solid;
+            color: #a40339;
+        }
+    }
+    
+    border-bottom: {
+        width: 2px;
+        style: solid;
+        color: #d0cdc7;
+    }
+}
+.intro {
+    font-size: 12px;
+    color: #8C8C8C;
+    @include width2;
+    height: 116px;
+    line-height: 116px;
+    text-align: center;
+    margin-top: 18px;
+    border: {
+        width: 1px;
+        style: solid;
+        color: #E5E5E5;
+    }
 }

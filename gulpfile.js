@@ -3,8 +3,8 @@ var gulp = require("gulp");
 var babel = require("gulp-babel");//es6转es5
 var es2015 = require("babel-preset-es2015");//es6转es5
 
-var webpack = require("gulp-webpack");  // npm install gulp-webpack --save-dev
-var del = require('del');   // npm install del --save-dev
+var webpack = require("gulp-webpack"); 
+var del = require('del');  
 // 需要额外安装 babel-plugin-check-es2015-constants 等模块
 
 
@@ -74,18 +74,18 @@ gulp.task("del", function(){
 });
 */
 
-/*
+
 var uglify = require('gulp-uglify');//获取 uglify 模块（用于压缩 JS）
 var rename = require('gulp-rename');//改名
 gulp.task("js", function(){
 	 console.log("开始处理理js文件（合并、压缩、改名、拷贝）");
 	 gulp.src("src/js/*.js")
-	 		.pipe(babel({presets:[es2015]}))
+	 	.pipe(babel({presets:[es2015]}))
 		 .pipe(uglify())
-		 .pipe(rename({suffix:'.min'}))
+		 .pipe(rename({"suffix":".min"}))
 		 .pipe(gulp.dest('dist/js'));
 });
-*/
+
 
 /*
 var gulp = require("gulp");
@@ -106,16 +106,6 @@ gulp.task("img", function(){
 */
 
 
-// 监听：如果⽂文件被修改，则执⾏行行相应任务
-gulp.task('auto',  function () {
-gulp.watch('src/es6/*.js', ['es6']);
-gulp.watch('src/js/*.js', ['js']);
-gulp.watch('src/css/*.css', ['css']);
-gulp.watch('src/scss/*.scss', ['sass'])
-});
-gulp.task('default', ["auto"],  function(){
-console.log("默认任务");
-});
 
 /*
 var gulp = require("gulp");
@@ -133,16 +123,30 @@ var sass = require('gulp-sass');//编译scss
 
 // 编译scss
    var gulp = require("gulp");
-   var sass = require('gulp-sass');//编译scss
+   var sass = require('gulp-sass');
+   var rename = require('gulp-rename')
+   var minifyCSS = require('gulp-minify-css')
    gulp.task("sass", function(){
    	console.log("正在编译sass文件")
    	 gulp.src('src/scss/*.scss')
    		 .pipe(sass())
+   		 .pipe(rename({"suffix":".min"}))
+   		 .pipe(minifyCSS())
    		 .pipe(gulp.dest('dist/css'));
    });
 
   
 
+// 监听：如果⽂文件被修改，则执⾏行行相应任务
+gulp.task('auto',  function () {
+gulp.watch('src/es6/*.js', ['es6']);
+gulp.watch('src/js/*.js', ['js']);
+gulp.watch('src/css/*.css', ['css']);
+gulp.watch('src/scss/*.scss', ['sass'])
+});
+gulp.task('default', ["auto"],  function(){
+console.log("默认任务");
+});
 
 
 
