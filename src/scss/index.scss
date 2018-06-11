@@ -509,7 +509,49 @@ a {
         display: block;
     }
 }
+.fix-nav{
+    display: none;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #a90c42;
+    position: fixed;    
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    img{
+        margin-left: 180px;
+        margin-right: 80px;
+        float: left;
+    }
+    div{
+        margin-top: 10px;
+        float: left;
+        input{
+        width:  660px;
+        height: 30px;
+        background: #FFFFFF;
+        float: left;
+        border: none;
+        padding-left: 10px;
+        outline: none;
+        
+        }
+    a{
+        display: block;
+        float: left;
+        width: 90px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background: #de082e;
+        color: #FFFFFF;
+        cursor: pointer;
+         }
+    }
+    
 
+}
 
 .slide{
     position: relative;

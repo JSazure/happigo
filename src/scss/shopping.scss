@@ -487,5 +487,8 @@
     }
     #user {
         @extend #can;
+        height: 120px;
+        line-height: 120px;
+        text-align: center;
     }
 }

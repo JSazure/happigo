@@ -325,6 +325,27 @@
 				})
 			})
 		</script>
+		<div class="fix-nav">
+			<img src="images/fix-logo.png" />
+			<div>
+				<input type="search" name="" value="" placeholder="养生汤包"/>
+				<a href="javascript:;">搜索</a>
+			</div>
+			
+		</div>
+<script>
+$(function () {
+    $(window).scroll(function () {
+        var winTop = $(window).scrollTop();
+        if (winTop >= 600) {
+            $('.fix-nav').stop().slideDown(500);
+        } else {
+            $('.fix-nav').stop().slideUp(500);
+        }
+    });
+});  	
+</script>
+
 
 		<div id="div1" class="slide"></div>
 
